@@ -1,9 +1,7 @@
 package com.mobile.service
 
-import java.io.File
-
 open class FileReader {
     open fun readFile(path: String): String {
-        return File(path).readText()
+        return FileReader::class.java.getResource("/dictionary.txt").readText()
     }
 }

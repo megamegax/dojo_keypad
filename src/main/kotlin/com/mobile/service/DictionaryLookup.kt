@@ -12,6 +12,6 @@ open class DictionaryLookup(
     }
 
     open fun lookup(input: String): List<String> {
-        return dictionary.filter { it.startsWith(input) }
+        return dictionary.filter { it.toLowerCase().startsWith(input.toLowerCase()) }
     }
 }
